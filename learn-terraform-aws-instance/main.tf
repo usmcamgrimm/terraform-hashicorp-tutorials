@@ -1,4 +1,10 @@
 terraform {
+  backend "remote" {
+    organization = "grimm-terraform-learning"
+    workspaces {
+      name = "learning-terraform-grimm-us"
+    }
+  }
   required_providers {
     aws = {
       source  = "hashicorp/aws"
